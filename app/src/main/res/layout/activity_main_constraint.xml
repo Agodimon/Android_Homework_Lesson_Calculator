@@ -298,9 +298,11 @@
         android:text="@string/button_point"
         android:textColor="#F4DC07"
         android:textSize="40sp"
+        android:onClick="appendText"
         app:layout_constraintEnd_toStartOf="@id/button_multiply"
         app:layout_constraintStart_toEndOf="@id/button0"
-        app:layout_constraintTop_toBottomOf="@id/button9" />
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button_multiply"

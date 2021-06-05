@@ -1,5 +1,4 @@
 package com.example.android_homework_lesson_calculator;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -7,11 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 public class MainActivity extends AppCompatActivity {
-
     TextView txt;
-    int buffer;
+    double buffer;
     char op;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +26,19 @@ public class MainActivity extends AppCompatActivity {
         ans.setOnClickListener(view->{
             switch (op){
                 case '+':
-                    buffer+=Integer.parseInt(txt.getText().toString());
+                    buffer+=Double.parseDouble(txt.getText().toString());
                     txt.setText(String.valueOf(buffer));
                     break;
                 case '-':
-                    buffer-=Integer.parseInt(txt.getText().toString());
+                    buffer-=Double.parseDouble(txt.getText().toString());
                     txt.setText(String.valueOf(buffer));
                     break;
                 case '/':
-                    buffer/=Integer.parseInt(txt.getText().toString());
+                    buffer/=Double.parseDouble(txt.getText().toString());
                     txt.setText(String.valueOf(buffer));
                     break;
                 case '*':
-                    buffer*=Integer.parseInt(txt.getText().toString());
+                    buffer*=Double.parseDouble(txt.getText().toString());
                     txt.setText(String.valueOf(buffer));
                     break;
             }
@@ -52,12 +49,10 @@ public class MainActivity extends AppCompatActivity {
         Button button=(Button) view;
     txt.setText(txt.getText().toString()+button.getText().toString());
     }
-
     public void ops(View view){
-    buffer=Integer.parseInt(txt.getText().toString());
+    buffer=Double.parseDouble(txt.getText().toString());
         Button button=(Button) view;
         op= button.getText().charAt(0);
         txt.setText("");
-
     }
 }
