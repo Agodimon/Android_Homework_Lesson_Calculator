@@ -11,15 +11,53 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView txt;
+    int buffer;
+    char op;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        op='1';
+        buffer=0;
         txt=findViewById(R.id.txt);
+        Button clearNum=findViewById(R.id.clear);
+        clearNum.setOnClickListener(view->{
+            buffer=0;
+            txt.setText("");
+        });
+        Button ans=findViewById(R.id.button_equals);
+        ans.setOnClickListener(view->{
+            switch (op){
+                case '+':
+                    buffer+=Integer.parseInt(txt.getText().toString());
+                    txt.setText(String.valueOf(buffer));
+                    break;
+                case '-':
+                    buffer-=Integer.parseInt(txt.getText().toString());
+                    txt.setText(String.valueOf(buffer));
+                    break;
+                case '/':
+                    buffer/=Integer.parseInt(txt.getText().toString());
+                    txt.setText(String.valueOf(buffer));
+                    break;
+                case '*':
+                    buffer*=Integer.parseInt(txt.getText().toString());
+                    txt.setText(String.valueOf(buffer));
+                    break;
+            }
+        });
     }
     @SuppressLint("SetTextI18n")
     public void appendText(View view){
         Button button=(Button) view;
     txt.setText(txt.getText().toString()+button.getText().toString());
+    }
+
+    public void ops(View view){
+    buffer=Integer.parseInt(txt.getText().toString());
+        Button button=(Button) view;
+        op= button.getText().charAt(0);
+        txt.setText("");
+
     }
 }

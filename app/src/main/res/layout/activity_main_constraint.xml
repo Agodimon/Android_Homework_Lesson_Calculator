@@ -103,6 +103,7 @@
 
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed" />
+
     <Button
         android:id="@+id/button_plus"
         android:layout_width="wrap_content"
@@ -110,6 +111,7 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+        android:onClick="ops"
         android:text="@string/button_plus"
         android:textColor="#F4DC07"
         android:textSize="40sp"
@@ -118,7 +120,8 @@
         app:layout_constraintStart_toEndOf="@id/button3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button4"
@@ -180,13 +183,15 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+        android:onClick="ops"
         android:text="@string/minus"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/button_divide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button6"
-        app:layout_constraintTop_toBottomOf="@id/button_plus" />
+        app:layout_constraintTop_toBottomOf="@id/button_plus"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button7"
@@ -247,13 +252,15 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+        android:onClick="ops"
         android:text="@string/divide"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button9"
-        app:layout_constraintTop_toBottomOf="@id/button_minus" />
+        app:layout_constraintTop_toBottomOf="@id/button_minus"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button0"
@@ -304,12 +311,14 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+        android:onClick="ops"
         android:text="@string/multiply"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@id/button_divide"
         app:layout_constraintStart_toEndOf="@id/button_point"
-        app:layout_constraintTop_toBottomOf="@id/button_divide" />
+        app:layout_constraintTop_toBottomOf="@id/button_divide"
+        tools:ignore="UsingOnClickInXml" />
 
     <TextView
         android:id="@+id/txt"
