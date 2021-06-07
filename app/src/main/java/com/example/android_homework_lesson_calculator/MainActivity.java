@@ -1,8 +1,9 @@
 package com.example.android_homework_lesson_calculator;
 
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,17 +17,8 @@ public class MainActivity extends AppCompatActivity implements Serializable {
     private static final String KEY_VALUE = "key_value";
     private static final String KEY_OPERATOR = "key_operator";
     private static final String KEY_RESULT = "key_result";
-    private Button btnNumberOne;
-    private Button btnNumberTwo;
-    private Button btnNumberThree;
-    private Button btnNumberFour;
-    private Button btnNumberFive;
-    private Button btnNumberSix;
-    private Button btnNumberSeven;
-    private Button btnNumberEight;
-    private Button btnNumberNine;
-    private Button btnNumberDot;
-    private Button btnNumberZero;
+
+
     private TextView txtResult;
     private double valueBuffer;
     private char operator;
@@ -35,17 +27,89 @@ public class MainActivity extends AppCompatActivity implements Serializable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initButton();
         operator = '1';
         valueBuffer = 0;
         txtResult = findViewById(R.id.txt);
+
+
+
+    }
+
+    private void initButton() {
+        Button btnNumberOne = findViewById(R.id.button1);
+        btnNumberOne.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 1;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberTwo = findViewById(R.id.button2);
+        btnNumberTwo.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 2;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberThree = findViewById(R.id.button3);
+        btnNumberThree.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 3;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberFour = findViewById(R.id.button4);
+        btnNumberFour.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 4;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberFive = findViewById(R.id.button5);
+        btnNumberFive.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 5;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberSix = findViewById(R.id.button6);
+        btnNumberSix.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 6;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberSeven = findViewById(R.id.button7);
+        btnNumberSeven.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 7;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberEight = findViewById(R.id.button8);
+        btnNumberEight.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 8;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberNine = findViewById(R.id.button9);
+        btnNumberNine.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 9;
+            txtResult.setText(value);
+        });
+
+        Button btnNumberDot = findViewById(R.id.button_point);
+        btnNumberDot.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + ".";
+            txtResult.setText(value);
+        });
+
+        Button btnNumberZero = findViewById(R.id.button0);
+        btnNumberZero.setOnClickListener(v -> {
+            String value = txtResult.getText().toString() + 0;
+            txtResult.setText(value);
+
+        });
+
         Button clearNum = findViewById(R.id.clear);
-
-        initButton();
-
         clearNum.setOnClickListener(view -> {
             valueBuffer = 0;
             txtResult.setText("");
         });
+
         Button ans = findViewById(R.id.button_equals);
         ans.setOnClickListener(view -> {
             switch (operator) {
@@ -66,77 +130,37 @@ public class MainActivity extends AppCompatActivity implements Serializable {
                     txtResult.setText(String.valueOf(valueBuffer));
                     break;
             }
-
             operator = 0;
         });
-    }
 
-    private void initButton() {
-        btnNumberOne = findViewById(R.id.button1);
-        btnNumberOne.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 1;
-            txtResult.setText(value);
+        Button btnMinus = findViewById(R.id.button_minus);
+        btnMinus.setOnClickListener(v -> {
+            valueBuffer = Double.parseDouble(txtResult.getText().toString());
+            operator = btnMinus.getText().charAt(0);
+            txtResult.setText("");
         });
 
-        btnNumberTwo = findViewById(R.id.button2);
-        btnNumberTwo.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 2;
-            txtResult.setText(value);
+        @SuppressLint("CutPasteId") Button btnPlus = findViewById(R.id.button_plus);
+        btnPlus.setOnClickListener(v -> {
+            valueBuffer = Double.parseDouble(txtResult.getText().toString());
+            operator = btnPlus.getText().charAt(0);
+            txtResult.setText("");
         });
 
-        btnNumberThree = findViewById(R.id.button3);
-        btnNumberThree.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 3;
-            txtResult.setText(value);
+        @SuppressLint("CutPasteId") Button btnDivide = findViewById(R.id.button_divide);
+        btnDivide.setOnClickListener(v -> {
+            valueBuffer = Double.parseDouble(txtResult.getText().toString());
+            operator = btnDivide.getText().charAt(0);
+            txtResult.setText("");
         });
 
-        btnNumberFour = findViewById(R.id.button4);
-        btnNumberFour.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 4;
-            txtResult.setText(value);
+        Button btnMultiply = findViewById(R.id.button_multiply);
+        btnMultiply.setOnClickListener(v -> {
+            valueBuffer = Double.parseDouble(txtResult.getText().toString());
+            operator = btnMultiply.getText().charAt(0);
+            txtResult.setText("");
         });
 
-        btnNumberFive = findViewById(R.id.button5);
-        btnNumberFive.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 5;
-            txtResult.setText(value);
-        });
-
-        btnNumberSix = findViewById(R.id.button6);
-        btnNumberSix.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 6;
-            txtResult.setText(value);
-        });
-
-        btnNumberSeven = findViewById(R.id.button7);
-        btnNumberSeven.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 7;
-            txtResult.setText(value);
-        });
-
-        btnNumberEight = findViewById(R.id.button8);
-        btnNumberEight.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 8;
-            txtResult.setText(value);
-        });
-
-        btnNumberNine = findViewById(R.id.button9);
-        btnNumberNine.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 9;
-            txtResult.setText(value);
-        });
-
-        btnNumberDot = findViewById(R.id.button_point);
-        btnNumberDot.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + ".";
-            txtResult.setText(value);
-        });
-
-        btnNumberZero = findViewById(R.id.button0);
-        btnNumberZero.setOnClickListener(v -> {
-            String value = txtResult.getText().toString() + 0;
-            txtResult.setText(value);
-        });
 
     }
 
@@ -164,14 +188,5 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         }
 
         txtResult.setText(result);
-    }
-
-
-
-    public void ops(View view) {
-        valueBuffer = Double.parseDouble(txtResult.getText().toString());
-        Button button = (Button) view;
-        operator = button.getText().charAt(0);
-        txtResult.setText("");
     }
 }
