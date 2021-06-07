@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
@@ -46,7 +45,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button2"
@@ -54,6 +54,7 @@
         android:layout_height="wrap_content"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_2"
         android:textColor="#F4DC07"
         android:textSize="40sp"
@@ -62,7 +63,8 @@
         app:layout_constraintStart_toEndOf="@id/button1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button3"
@@ -71,6 +73,7 @@
         android:layout_marginStart="8dp"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_3"
         android:textColor="#F4DC07"
         android:textSize="40sp"
@@ -78,6 +81,23 @@
         app:layout_constraintEnd_toStartOf="@id/button_plus"
         app:layout_constraintStart_toEndOf="@id/button2"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="UsingOnClickInXml" />
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:alpha="0.5"
+        android:backgroundTint="#9C27B0"
+        android:text="@string/clear"
+        android:textColor="#F4DC07"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/button_plus"
+        app:layout_constraintEnd_toEndOf="@id/button_plus"
+        app:layout_constraintStart_toStartOf="@id/button1"
+
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -88,6 +108,7 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/button_plus"
         android:textColor="#F4DC07"
         android:textSize="40sp"
@@ -96,7 +117,8 @@
         app:layout_constraintStart_toEndOf="@id/button3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button4"
@@ -106,6 +128,7 @@
         android:alpha="1"
         android:backgroundTint="#9C27B0"
 
+
         android:text="@string/_4"
         android:textColor="#F4DC07"
         android:textSize="40sp"
@@ -114,7 +137,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button1" />
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button5"
@@ -122,13 +146,15 @@
         android:layout_height="wrap_content"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_5"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/button8"
         app:layout_constraintEnd_toStartOf="@id/button6"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@id/button2" />
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button6"
@@ -137,13 +163,15 @@
         android:layout_marginStart="8dp"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_6"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/button9"
         app:layout_constraintEnd_toStartOf="@id/button_minus"
         app:layout_constraintStart_toEndOf="@id/button5"
-        app:layout_constraintTop_toBottomOf="@id/button3" />
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button_minus"
@@ -152,13 +180,15 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/minus"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/button_divide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button6"
-        app:layout_constraintTop_toBottomOf="@id/button_plus" />
+        app:layout_constraintTop_toBottomOf="@id/button_plus"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button7"
@@ -167,6 +197,7 @@
         android:layout_marginEnd="8dp"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_7"
         android:textColor="#F4DC07"
         android:textSize="40sp"
@@ -175,7 +206,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button4" />
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button8"
@@ -183,13 +215,15 @@
         android:layout_height="wrap_content"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_8"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/button9"
         app:layout_constraintStart_toEndOf="@id/button7"
-        app:layout_constraintTop_toBottomOf="@id/button5" />
+        app:layout_constraintTop_toBottomOf="@id/button5"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button9"
@@ -198,13 +232,15 @@
         android:layout_marginStart="8dp"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_9"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/button_divide"
         app:layout_constraintStart_toEndOf="@id/button8"
-        app:layout_constraintTop_toBottomOf="@id/button6" />
+        app:layout_constraintTop_toBottomOf="@id/button6"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button_divide"
@@ -213,13 +249,15 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/divide"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button9"
-        app:layout_constraintTop_toBottomOf="@id/button_minus" />
+        app:layout_constraintTop_toBottomOf="@id/button_minus"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button0"
@@ -227,12 +265,14 @@
         android:layout_height="wrap_content"
         android:alpha="1"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/_0"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@id/button_point"
         app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@id/button8" />
+        app:layout_constraintTop_toBottomOf="@id/button8"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button_equals"
@@ -257,9 +297,11 @@
         android:text="@string/button_point"
         android:textColor="#F4DC07"
         android:textSize="40sp"
+
         app:layout_constraintEnd_toStartOf="@id/button_multiply"
         app:layout_constraintStart_toEndOf="@id/button0"
-        app:layout_constraintTop_toBottomOf="@id/button9" />
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/button_multiply"
@@ -268,11 +310,30 @@
         android:layout_marginStart="8dp"
         android:alpha="0.5"
         android:backgroundTint="#9C27B0"
+
         android:text="@string/multiply"
         android:textColor="#F4DC07"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@id/button_divide"
         app:layout_constraintStart_toEndOf="@id/button_point"
-        app:layout_constraintTop_toBottomOf="@id/button_divide" />
+        app:layout_constraintTop_toBottomOf="@id/button_divide"
+        tools:ignore="UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:alpha="0.8"
+        android:textColor="#F4DC07"
+        android:textSize="60sp"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintBottom_toTopOf="@id/clear"
+        app:layout_constraintEnd_toEndOf="@id/clear"
+        app:layout_constraintStart_toStartOf="@id/clear"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
