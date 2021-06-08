@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="1"
         app:srcCompat="@drawable/calculator_office" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -84,7 +84,8 @@
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="UsingOnClickInXml" />
-    <Button
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/clear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -101,7 +102,7 @@
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -120,7 +121,7 @@
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,7 +141,7 @@
         app:layout_constraintTop_toBottomOf="@id/button1"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -156,7 +157,7 @@
         app:layout_constraintTop_toBottomOf="@id/button2"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -173,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@id/button3"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_minus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -190,7 +191,7 @@
         app:layout_constraintTop_toBottomOf="@id/button_plus"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -209,7 +210,7 @@
         app:layout_constraintTop_toBottomOf="@id/button4"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -225,7 +226,7 @@
         app:layout_constraintTop_toBottomOf="@id/button5"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -242,7 +243,7 @@
         app:layout_constraintTop_toBottomOf="@id/button6"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -259,7 +260,7 @@
         app:layout_constraintTop_toBottomOf="@id/button_minus"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -274,7 +275,7 @@
         app:layout_constraintTop_toBottomOf="@id/button8"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_equals"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -287,7 +288,7 @@
         app:layout_constraintStart_toStartOf="@id/button0"
         app:layout_constraintTop_toBottomOf="@id/button0" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -303,7 +304,7 @@
         app:layout_constraintTop_toBottomOf="@id/button9"
         tools:ignore="UsingOnClickInXml" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_multiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -319,21 +320,50 @@
         app:layout_constraintTop_toBottomOf="@id/button_divide"
         tools:ignore="UsingOnClickInXml" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:layout_marginBottom="15sp"
         android:alpha="0.8"
+        android:background="@color/black"
+        android:textAlignment="textEnd"
         android:textColor="#F4DC07"
         android:textSize="60sp"
-        android:textAlignment="textEnd"
         android:textStyle="bold"
-        android:layout_marginBottom="15sp"
         app:layout_constraintBottom_toTopOf="@id/clear"
         app:layout_constraintEnd_toEndOf="@id/clear"
-        app:layout_constraintStart_toStartOf="@id/clear"
+        app:layout_constraintStart_toStartOf="@id/clear" />
 
-        />
+    <RadioGroup
+
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:alpha="0.87"
+        app:layout_constraintEnd_toEndOf="@id/button8"
+        app:layout_constraintStart_toStartOf="@id/button7"
+        app:layout_constraintTop_toBottomOf="@id/button_equals">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_dark_theme"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/dark_theme" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_light_theme"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/light_theme" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_orange_theme"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/orange_theme" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
