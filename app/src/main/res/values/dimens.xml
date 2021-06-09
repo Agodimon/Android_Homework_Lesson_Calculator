@@ -6,7 +6,9 @@
     <dimen name="margin_radio_btn_group">8sp</dimen>
     <dimen name="layout_height_radio_btn">20sp</dimen>
     <dimen name="text_size_radio_btn">17sp</dimen>
-
-
+    <dimen name="layout_width_AppCompatImageView">380dp</dimen>
+    <dimen name="layout_height_AppCompatImageView">293dp</dimen>
+    <dimen name="TextView_layout_marginBottom">15sp</dimen>
+    <dimen name="TextView_textSize">60sp</dimen>
 
 </resources>
