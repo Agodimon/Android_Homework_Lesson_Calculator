@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin">1dp</dimen>
-    <dimen name="textSize">15sp</dimen>
+    <dimen name="margin">4dp</dimen>
+    <dimen name="textSize">30sp</dimen>
+    <dimen name="marginStart">1dp</dimen>
+    <dimen name="margin_radio_btn_group">8sp</dimen>
+    <dimen name="layout_height_radio_btn">20sp</dimen>
+    <dimen name="text_size_radio_btn">17sp</dimen>
+
+
 
 </resources>

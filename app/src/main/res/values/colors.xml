@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF5722</color>
     <color name="yellow">#FFEB3B</color>
+    <color name="purple_my">#9C27B0</color>
+    <color name="orange_black">#91631F</color>
+    <color name="orange_white">#F18F45</color>
+    <color name="purple_white">#AF86B6</color>
+    <color name="purple_black">#342337</color>
 </resources>
