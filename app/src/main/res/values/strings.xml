@@ -20,5 +20,8 @@
     <string name="dark_theme">Theme dark</string>
     <string name="light_theme">Theme light</string>
     <string name="orange_theme">Theme orange</string>
+    <string name="Settings_main_act">Settings_main_act</string>
+    <string name="btn_img_settings">Set</string>
+    <string name="img_calc">Img_calc</string>
 
 </resources>
