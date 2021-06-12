@@ -28,6 +28,7 @@ public class SettingsActivity extends AppCompatActivity implements Constants {
         ImageButton btnReturn = findViewById(R.id.imageButton);
         btnReturn.setOnClickListener(v -> {
         // Метод finish() завершает активити
+
             finish();
         });
 

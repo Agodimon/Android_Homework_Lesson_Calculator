@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.Serializable;
+
 
 public class MainActivity extends AppCompatActivity implements Constants {
     private static final String KEY_VALUE = "key_value";
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements Constants {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(getAppTheme());
+
         setContentView(R.layout.activity_main);
         initButton();
         operator = '1';
@@ -34,8 +35,10 @@ public class MainActivity extends AppCompatActivity implements Constants {
         txtResult = findViewById(R.id.txt);
         initView();
 
-
     }
+
+
+
 
     private int getAppTheme() {
         return codeStyleToStyleId(getCodeStyle(R.style.dark_theme));
@@ -72,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements Constants {
             startActivity(runSettings);
         });
     }
+
+
+
 
 
     private void initButton() {

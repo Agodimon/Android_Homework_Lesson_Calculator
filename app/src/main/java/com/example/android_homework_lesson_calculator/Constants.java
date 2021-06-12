@@ -8,4 +8,6 @@ public interface Constants {
     int MyCoolCodeStyle = 0;
     int AppThemeLightCodeStyle = 1;
     int AppThemeCodeStyle = 2;
+
+
 }
