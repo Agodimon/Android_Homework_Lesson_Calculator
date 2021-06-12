@@ -12,6 +12,7 @@ import com.google.android.material.radiobutton.MaterialRadioButton;
 
 
 
+
 public class SettingsActivity extends AppCompatActivity implements Constants {
 
 
@@ -28,7 +29,7 @@ public class SettingsActivity extends AppCompatActivity implements Constants {
         ImageButton btnReturn = findViewById(R.id.imageButton);
         btnReturn.setOnClickListener(v -> {
         // Метод finish() завершает активити
-
+            setResult(RESULT_OK);
             finish();
         });
 

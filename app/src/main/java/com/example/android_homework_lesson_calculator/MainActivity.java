@@ -10,18 +10,27 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 
 
 public class MainActivity extends AppCompatActivity implements Constants {
     private static final String KEY_VALUE = "key_value";
     private static final String KEY_OPERATOR = "key_operator";
     private static final String KEY_RESULT = "key_result";
+    private static final int KEY_REQUEST_SETTINGS = 9999;
 
     private TextView txtResult;
     private double valueBuffer;
     private char operator;
+
+//    ActivityResultLauncher<String> activityLauncher = registerForActivityResult(new GetContent(),
+//            new ActivityResultCallback<Uri>() {
+//                @Override
+//                public void onActivityResult(Uri uri) {
+//                    // Handle the returned Uri
+//                }
+//            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,13 +81,20 @@ public class MainActivity extends AppCompatActivity implements Constants {
         //  передаётся класс активити
             Intent runSettings = new Intent(MainActivity.this,SettingsActivity.class);
         // Метод стартует активити, указанную в интенте
-            startActivity(runSettings);
+//            startActivity(runSettings);
+           startActivityForResult(runSettings, KEY_REQUEST_SETTINGS);
+//            activityLauncher.launch("");
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-
-
+        if (resultCode == RESULT_OK && requestCode == KEY_REQUEST_SETTINGS) {
+            recreate();
+        }
+    }
 
     private void initButton() {
         Button btnNumberOne = findViewById(R.id.button1);
