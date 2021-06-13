@@ -2,6 +2,7 @@ package com.example.android_homework_lesson_calculator;
 
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,28 +10,33 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.android_homework_lesson_calculator.Const.AppTheme;
+import static com.example.android_homework_lesson_calculator.Const.AppThemeCodeStyle;
+import static com.example.android_homework_lesson_calculator.Const.AppThemeLightCodeStyle;
+import static com.example.android_homework_lesson_calculator.Const.NameSharedPreference;
 
-public class MainActivity extends AppCompatActivity implements Constants {
+
+public class MainActivity extends AppCompatActivity {
     private static final String KEY_VALUE = "key_value";
     private static final String KEY_OPERATOR = "key_operator";
     private static final String KEY_RESULT = "key_result";
-    private static final int KEY_REQUEST_SETTINGS = 9999;
+//    private static final int KEY_REQUEST_SETTINGS = 9999;
 
     private TextView txtResult;
     private double valueBuffer;
     private char operator;
 
-//    ActivityResultLauncher<String> activityLauncher = registerForActivityResult(new GetContent(),
-//            new ActivityResultCallback<Uri>() {
-//                @Override
-//                public void onActivityResult(Uri uri) {
-//                    // Handle the returned Uri
-//                }
-//            });
+    ActivityResultLauncher<Intent> activityLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+        if( result.getResultCode() == Activity.RESULT_OK) {
+                recreate();
+            }
+    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements Constants {
 
 
     private int getAppTheme() {
-        return codeStyleToStyleId(getCodeStyle(R.style.dark_theme));
+        return codeStyleToStyleId(getCodeStyle());
     }
 
     private int codeStyleToStyleId(int codeStyle) {
@@ -64,12 +70,12 @@ public class MainActivity extends AppCompatActivity implements Constants {
         }
     }
 
-    private int getCodeStyle(int codeStyle) {
+    private int getCodeStyle() {
 // Работаем через специальный класс сохранения и чтения настроек
         SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference,
                 MODE_PRIVATE);
 //Прочитать тему, если настройка не найдена - взять по умолчанию
-        return sharedPref.getInt(AppTheme, codeStyle);
+        return sharedPref.getInt(AppTheme, R.style.dark_theme);
     }
 
     private void initView(){
@@ -82,19 +88,19 @@ public class MainActivity extends AppCompatActivity implements Constants {
             Intent runSettings = new Intent(MainActivity.this,SettingsActivity.class);
         // Метод стартует активити, указанную в интенте
 //            startActivity(runSettings);
-           startActivityForResult(runSettings, KEY_REQUEST_SETTINGS);
-//            activityLauncher.launch("");
+//           startActivityForResult(runSettings, KEY_REQUEST_SETTINGS);
+            activityLauncher.launch(runSettings);
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK && requestCode == KEY_REQUEST_SETTINGS) {
-            recreate();
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if (resultCode == RESULT_OK && requestCode == KEY_REQUEST_SETTINGS) {
+//            recreate();
+//        }
+//    }
 
     private void initButton() {
         Button btnNumberOne = findViewById(R.id.button1);

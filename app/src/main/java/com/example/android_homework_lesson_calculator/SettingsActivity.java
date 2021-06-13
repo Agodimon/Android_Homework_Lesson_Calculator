@@ -1,5 +1,6 @@
 package com.example.android_homework_lesson_calculator;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
+import static com.example.android_homework_lesson_calculator.Const.AppTheme;
+import static com.example.android_homework_lesson_calculator.Const.AppThemeCodeStyle;
+import static com.example.android_homework_lesson_calculator.Const.AppThemeLightCodeStyle;
+import static com.example.android_homework_lesson_calculator.Const.MyCoolCodeStyle;
+import static com.example.android_homework_lesson_calculator.Const.NameSharedPreference;
 
 
-
-public class SettingsActivity extends AppCompatActivity implements Constants {
-
-
+public class SettingsActivity extends AppCompatActivity {
 
 
     @Override
@@ -28,8 +31,9 @@ public class SettingsActivity extends AppCompatActivity implements Constants {
 
         ImageButton btnReturn = findViewById(R.id.imageButton);
         btnReturn.setOnClickListener(v -> {
-        // Метод finish() завершает активити
-            setResult(RESULT_OK);
+            // Метод finish() завершает активити
+//            setResult(RESULT_OK);
+            setResult(Activity.RESULT_OK);
             finish();
         });
 
