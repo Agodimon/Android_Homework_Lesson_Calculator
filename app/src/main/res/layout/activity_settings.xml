@@ -8,44 +8,8 @@
     tools:context=".SettingsActivity"
     >
 
-    <RadioGroup
-        android:id="@+id/radioButtons"
-        android:layout_width="300sp"
-        android:layout_height="100sp"
-        android:alpha="0.87"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintHorizontal_bias="0.3"
-        >
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radio_btn_dark_theme"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_radio_btn"
-            android:text="@string/dark_theme"
-            android:textSize="@dimen/text_size_radio_btn"
-            android:textStyle="bold|normal" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radio_btn_light_theme"
-            android:layout_width="match_parent"
-            android:layout_height="16dp"
-            android:text="@string/light_theme"
-            android:textSize="@dimen/text_size_radio_btn"
-            android:textStyle="bold|normal" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radio_btn_orange_theme"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/layout_height_radio_btn"
-            android:text="@string/orange_theme"
-            android:textSize="@dimen/text_size_radio_btn"
-            android:textStyle="bold|normal" />
-    </RadioGroup>
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
@@ -63,14 +27,51 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="415dp"
-        android:layout_height="331dp"
+        android:layout_width="707dp"
+        android:layout_height="397dp"
+        android:contentDescription="@string/img_calc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.63"
-        app:srcCompat="@drawable/calculator_office"
-        android:contentDescription="@string/img_calc" />
+        app:srcCompat="@drawable/calculator_office" />
 
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.87"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_dark_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_theme"
+            android:textSize="@dimen/text_size_radio_btn"
+            android:textStyle="bold|normal" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_light_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/light_theme"
+            android:textSize="@dimen/text_size_radio_btn"
+            android:textStyle="bold|normal" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_btn_orange_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/orange_theme"
+            android:textSize="@dimen/text_size_radio_btn"
+            android:textStyle="bold|normal" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

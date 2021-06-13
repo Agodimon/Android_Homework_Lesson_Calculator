@@ -2,13 +2,17 @@
 <resources>
     <dimen name="margin">4dp</dimen>
     <dimen name="textSize">30sp</dimen>
-    <dimen name="marginStart">1dp</dimen>
+    <dimen name="marginStart">1sp</dimen>
     <dimen name="margin_radio_btn_group">8sp</dimen>
     <dimen name="layout_height_radio_btn">20sp</dimen>
-    <dimen name="text_size_radio_btn">17sp</dimen>
+    <dimen name="text_size_radio_btn">20sp</dimen>
     <dimen name="layout_width_AppCompatImageView">380dp</dimen>
     <dimen name="layout_height_AppCompatImageView">293dp</dimen>
     <dimen name="TextView_layout_marginBottom">15sp</dimen>
     <dimen name="TextView_textSize">60sp</dimen>
+    <dimen name="textSize_horizontal">30sp</dimen>
+    <dimen name="TextView_textSize_new">40sp</dimen>
+    <dimen name="textSize_1">20sp</dimen>
+    <dimen name="margin_0sp">0sp</dimen>
 
 </resources>
