@@ -17,5 +17,8 @@
     <string name="button_plus">+</string>
     <string name="equals">=</string>
     <string name="clear">c</string>
+    <string name="dark_theme">Theme dark</string>
+    <string name="light_theme">Theme light</string>
+    <string name="orange_theme">Theme orange</string>
 
 </resources>
